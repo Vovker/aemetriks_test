@@ -1,0 +1,114 @@
+@import "src/App";
+
+.selector {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selector__title {
+  width: 100px;
+  height: 50px;
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.selector__block {
+  width: 700px;
+  height: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.selector__block__select {
+  width: 100%;
+  height: auto;
+}
+
+.selector__block__select__list {
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid $borderMainColor;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.selector__functional-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 5px;
+}
+
+.selector__functional-block__button {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+
+  @media(max-width: 768px) {
+    transform: rotate(90deg);
+  }
+}
+
+.selector__functional-block__button__icon {
+  width: 10px;
+  height: 10px;
+}
+
+.selector__functional-block__button__icon--reversed {
+  transform: rotate(-180deg);
+}
+
+.selector__functional-block__button:hover {
+  cursor: pointer;
+}
+
+.selector__functional-block__button--multiple {
+  background: $buttonGrey;
+}
+
+.selector__functional-block__button--single {
+  background: $buttonGreen;
+}
+
+.node {
+  width: 100%;
+  height: auto;
+  padding: 4px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+
+  &:hover {
+    cursor: pointer;
+    background: #f5f5f5;
+  }
+}
+
+.node--selected {
+  background: #f5f5f5;
+}
+
+@media(max-width: 768px) {
+  .selector__block {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .selector__functional-block{
+    flex-direction: row;
+    width: 100%;
+  }
+}
